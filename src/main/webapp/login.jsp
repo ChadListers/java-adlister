@@ -19,9 +19,12 @@
 %>
 <html>
 <head>
-    <title>Login Page</title>
+    <%@ include file="partials/head.jsp" %>
 </head>
 <body>
+    <%@ include file="partials/navbar.jsp" %>
+
+    <h4>Please Log In</h4>
     <form method="POST" action="login.jsp">
         <label for="username">Username</label>
         <input id="username" name="username" type="text">
@@ -35,4 +38,5 @@
 
     </form>
 </body>
+<%@ include file="partials/scripts.jsp" %>
 </html>

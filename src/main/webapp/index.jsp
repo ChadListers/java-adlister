@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title><%= "some title" %></title>
+    <%@ include file="partials/head.jsp" %>
 </head>
 <body>
     <c:if test="true">
@@ -12,4 +12,5 @@
         <h1>single letter variable names are good</h1>
     </c:if>
 </body>
+<%@ include file="partials/scripts.jsp" %>
 </html>

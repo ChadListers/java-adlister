@@ -11,6 +11,9 @@
     <title>Title</title>
 </head>
 <body>
- <h1>Hello <%=session.getAttribute("Name")%></h1>
+    <%@ include file="partials/navbar.jsp" %>
+    <h1>Hello <%=session.getAttribute("Name")%></h1>
+
 </body>
+<%@ include file="partials/scripts.jsp" %>
 </html>
