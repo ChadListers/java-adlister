@@ -19,10 +19,13 @@
 %>
 <html>
 <head>
-    <%@ include file="partials/head.jsp" %>
+    <jsp:include page="partials/head.jsp" >
+        <jsp:param name="title" value="Login Page" />
+    </jsp:include>
 </head>
 <body>
-    <%@ include file="partials/navbar.jsp" %>
+
+    <jsp:include page="partials/navbar.jsp" />
 
     <h4>Please Log In</h4>
     <form method="POST" action="login.jsp">

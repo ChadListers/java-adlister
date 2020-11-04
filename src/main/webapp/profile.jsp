@@ -8,12 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <jsp:include page="partials/head.jsp" >
+        <jsp:param name="title" value="Profile" />
+    </jsp:include>
 </head>
 <body>
-    <%@ include file="partials/navbar.jsp" %>
+    <jsp:include page="partials/navbar.jsp" />
     <h1>Hello <%=session.getAttribute("Name")%></h1>
 
 </body>
-<%@ include file="partials/scripts.jsp" %>
+    <jsp:include page="partials/scripts.jsp" />
 </html>
