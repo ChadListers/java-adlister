@@ -6,10 +6,10 @@ import java.util.List;
 
 public class MySQLAdsDao implements Ads {
     private Connection connection = null;
-    private Config config = new Config();
+//    private Config config = new Config();
     private List<Ad> ads;
 
-    public MySQLAdsDao(){
+    public MySQLAdsDao(Config config){
         try {
             DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(
