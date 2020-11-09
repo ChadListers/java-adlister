@@ -23,6 +23,8 @@ public class MySQLAdsDao implements Ads {
 
     }
 
+    // Retrieves ads from the database
+    @Override
     public List<Ad> all() {
         Statement statement = null;
         List<Ad> ads = new ArrayList<>();
@@ -45,14 +47,14 @@ public class MySQLAdsDao implements Ads {
         return ads;
     }
 
-//  This inserts to the database!
+    // This inserts ads to the database!
+    @Override
     public Long insert(Ad ad) {
-        String sqlInsert = String.format("INSERT INTO ads (user_id, title, description) values(%d, %s, %s)",
-                ad.getUserId(), ad.getTitle(), ad.getDescription());
+        String sql = String.format("insert into ads (user_id, title, description) values(%d, '%s', '%s')", ad.getUserId() ,ad.getTitle(), ad.getDescription());
 
         try {
             Statement statement = connection.createStatement();
-            statement.executeUpdate(sqlInsert, Statement.RETURN_GENERATED_KEYS);
+            statement.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
             ResultSet rs = statement.getGeneratedKeys();
             rs.next();
             return rs.getLong(1);
