@@ -21,9 +21,24 @@ public class MySQLUsersDao implements Users {
             throw new RuntimeException("Error connecting to the database!", e);
         }
     }
+
     @Override
     public User findByUsername(String username) {
-        return null;
+        String sql = "SELECT * FROM users WHERE username LIKE ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            stmt.setString(1, username);
+            ResultSet rs = stmt.executeQuery();
+            rs.next();
+            return new User(
+                    rs.getLong("id"),
+                    rs.getString("username"),
+                    rs.getString("email"),
+                    rs.getString("password")
+            );
+        } catch (SQLException e) {
+            throw new RuntimeException("Could not find " + username);
+        }
     }
 
     @Override
