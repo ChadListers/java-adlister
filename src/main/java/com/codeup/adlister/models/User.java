@@ -10,12 +10,14 @@ public class User {
 
     public User() {}
 
+//  INSERT, make sure the password is hashed
     public User(String username, String email, String password) {
         this.username = username;
         this.email = email;
         setPassword(password);
     }
 
+//  SELECT, do not hash this password. Only for reading purposes
     public User(long id, String username, String email, String password) {
         this.id = id;
         this.username = username;
