@@ -2,13 +2,34 @@ package com.codeup.adlister.models;
 
 import com.codeup.adlister.util.Password;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     private long id;
     private String username;
     private String email;
     private String password;
+    private int phoneNumber;
+    private boolean isAdmin;
 
     public User() {}
+
+    public User(long id, String username, String email, String password, int phoneNumber, boolean isAdmin) {
+        this.id = id;
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.phoneNumber = phoneNumber;
+        this.isAdmin = isAdmin;
+    }
+
+    public User(String username, String email, String password, int phoneNumber, boolean isAdmin) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.phoneNumber = phoneNumber;
+        this.isAdmin = isAdmin;
+    }
 
     public User(String username, String email, String password) {
         this.username = username;
@@ -21,6 +42,22 @@ public class User {
         this.username = username;
         this.email = email;
         this.password = password;
+    }
+
+    public int getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(int phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
     }
 
     public long getId() {
