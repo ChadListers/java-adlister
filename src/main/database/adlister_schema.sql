@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS ads (
     title VARCHAR(250) NOT NULL,
     description TEXT NOT NULL,
     price INT UNSIGNED NOT NULL,
-    image VARCHAR(250),
+    image_url VARCHAR(250),
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users (id),
     FOREIGN KEY (category_id) REFERENCES category (id)
