@@ -1,6 +1,8 @@
 package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
+import com.codeup.adlister.models.User;
+import com.codeup.adlister.util.Password;
 import com.mysql.cj.jdbc.Driver;
 
 import java.io.FileInputStream;
@@ -39,13 +41,53 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
+    public List<Ad> all(long id) {
+        String query = "SELECT * FROM ads WHERE user_id =" + id;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            ResultSet rs = preparedStatement.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving specific ad.", e);
+        }
+    }
+
+
+    @Override
+    public void delete(long id) {
+        String query = "DELETE FROM chadlister_db.ads WHERE id = ?";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setLong(1, id);
+            preparedStatement.executeQuery();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error deleting ad.", e);
+        }
+    }
+
+    ////////// testing //////////////
+    public static void main(String[] args) {
+        Config config = new Config();
+        MySQLUsersDao usersDao = new MySQLUsersDao(config);
+//        String hash = Password.hash("password123");
+//        User user = new User("oscar-ct", "test@email.com", hash, "2108496794");
+//        usersDao.insert(user);
+        usersDao.delete(2);
+
+    }
+
+
+    @Override
     public Long insert(Ad ad) {
         try {
-            String insertQuery = "INSERT INTO ads(user_id, title, description) VALUES (?, ?, ?)";
+            String insertQuery = "INSERT INTO chadlister_db.ads(user_id, category_id, title, description, price, image_url) VALUES (?, ?, ?, ?, ?, ?)";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, ad.getUserId());
-            stmt.setString(2, ad.getTitle());
-            stmt.setString(3, ad.getDescription());
+            stmt.setLong(2, ad.getCategoryId());
+            stmt.setString(3, ad.getTitle());
+            stmt.setString(4, ad.getDescription());
+            stmt.setInt(5, ad.getPrice());
+            stmt.setString(6, ad.getImageUrl());
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
@@ -59,8 +101,11 @@ public class MySQLAdsDao implements Ads {
         return new Ad(
             rs.getLong("id"),
             rs.getLong("user_id"),
+            rs.getLong("category_id"),
             rs.getString("title"),
-            rs.getString("description")
+            rs.getString("description"),
+            rs.getInt("price"),
+            rs.getString("image_url")
         );
     }
 
