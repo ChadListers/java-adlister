@@ -9,12 +9,12 @@ public class User implements Serializable {
     private String username;
     private String email;
     private String password;
-    private int phoneNumber;
+    private String phoneNumber;
     private boolean isAdmin;
 
     public User() {}
 
-    public User(long id, String username, String email, String password, int phoneNumber, boolean isAdmin) {
+    public User(long id, String username, String email, String password, String phoneNumber, boolean isAdmin) {
         this.id = id;
         this.username = username;
         this.email = email;
@@ -23,12 +23,19 @@ public class User implements Serializable {
         this.isAdmin = isAdmin;
     }
 
-    public User(String username, String email, String password, int phoneNumber, boolean isAdmin) {
+    public User(String username, String email, String password, String phoneNumber, boolean isAdmin) {
         this.username = username;
         this.email = email;
         this.password = password;
         this.phoneNumber = phoneNumber;
         this.isAdmin = isAdmin;
+    }
+
+    public User(String username, String email, String password, String phoneNumber) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.phoneNumber = phoneNumber;
     }
 
     public User(String username, String email, String password) {
@@ -44,11 +51,11 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
