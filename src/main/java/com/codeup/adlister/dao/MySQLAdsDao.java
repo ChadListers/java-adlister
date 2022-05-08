@@ -52,6 +52,21 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    ////// Not tested yet  ///////////
+    @Override
+    public List<Ad> findAdByName(String adName) {
+        String query = "SELECT * FROM chadlister_db.ads WHERE title LIKE ? OR description LIKE ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, "%" + adName + "%");
+            stmt.setString(2, "%" + adName + "%");
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error searchiing for ads", e);
+        }
+    }
+
 
     @Override
     public void delete(long id) {
@@ -116,4 +131,8 @@ public class MySQLAdsDao implements Ads {
         }
         return ads;
     }
+
+
+
+
 }
