@@ -32,7 +32,7 @@ public class MySQLAdsDao implements Ads {
     public List<Ad> all() {
         PreparedStatement stmt = null;
         try {
-            stmt = connection.prepareStatement("SELECT * FROM ads");
+            stmt = connection.prepareStatement("SELECT * FROM chadlister_db.ads");
             ResultSet rs = stmt.executeQuery();
             return createAdsFromResults(rs);
         } catch (SQLException e) {
@@ -42,7 +42,7 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public List<Ad> all(long id) {
-        String query = "SELECT * FROM ads WHERE user_id =" + id;
+        String query = "SELECT * FROM chadlister_db.ads WHERE user_id =" + id;
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             ResultSet rs = preparedStatement.executeQuery();

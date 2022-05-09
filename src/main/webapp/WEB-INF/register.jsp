@@ -19,8 +19,13 @@
                 <input id="email" name="email" class="form-control" type="text">
             </div>
             <div class="form-group">
+<<<<<<< HEAD
                 <label for="phoneNumber">Phone Number</label>
                 <input id="phoneNumber" name="phoneNumber" class="form-control" type="text">
+=======
+                <label for="phone">Phone Number</label>
+                <input id="phone" name="phone" class="form-control" type="text">
+>>>>>>> 279e4efd477aa9d66c733d8c3600fb1c46707f5e
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
