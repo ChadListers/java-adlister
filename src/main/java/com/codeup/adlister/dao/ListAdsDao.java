@@ -46,6 +46,11 @@ public class ListAdsDao implements Ads {
     public void update(Ad ad) {
 
     }
+
+    @Override
+    public Ad findAdById(long id) {
+        return null;
+    }
     /////////////////////////////////////
 
 
