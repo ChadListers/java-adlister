@@ -41,15 +41,16 @@ public class EditAdsServlet extends HttpServlet {
         int price = Integer.parseInt(request.getParameter("price"));
         long categoryId = Long.parseLong(request.getParameter("category"));
         String url = request.getParameter("image");
+        long adId = Long.parseLong(request.getParameter("adId"));
 
-        User user = (User) request.getSession().getAttribute("user");
+//        User user = (User) request.getSession().getAttribute("user");
         Ad ad = new Ad(
                 title,
                 description,
                 price,
                 categoryId,
                 url,
-                user.getId()
+                adId
         );
         DaoFactory.getAdsDao().update(ad);
         response.sendRedirect("/profile/ads");

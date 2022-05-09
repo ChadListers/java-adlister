@@ -54,6 +54,7 @@
         <div class="form-group">
             <label for="image">Image Url</label>
             <input id="image" name="image" class="form-control" type="url" value="${adToEdit.imageUrl}">
+            <input id="id" name="adId" class="form-control" type="hidden" value="${adToEdit.id}">
         </div>
         <input type="submit" class="btn btn-block btn-primary">
     </form>
