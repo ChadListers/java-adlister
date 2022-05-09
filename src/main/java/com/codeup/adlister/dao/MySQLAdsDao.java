@@ -70,9 +70,9 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public void delete(long id) {
-        String query = "DELETE FROM chadlister_db.ads WHERE id = ?";
+        String insertQuery = "DELETE FROM chadlister_db.ads WHERE id = ?";
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            PreparedStatement preparedStatement = connection.prepareStatement(insertQuery);
             preparedStatement.setLong(1, id);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
@@ -80,16 +80,7 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    ////////// testing //////////////
-    public static void main(String[] args) {
-        Config config = new Config();
-        MySQLUsersDao usersDao = new MySQLUsersDao(config);
-//        String hash = Password.hash("password123");
-//        User user = new User("oscar-ct", "test@email.com", hash, "2108496794");
-//        usersDao.insert(user);
-        usersDao.delete(2);
 
-    }
 
 
     @Override
@@ -132,6 +123,41 @@ public class MySQLAdsDao implements Ads {
         return ads;
     }
 
+
+    @Override
+    public void update(Ad ad) {
+        String insetQuery = "UPDATE chadlister_db.ads SET title = ?, description = ?, price = ?, category_id = ?, image_url = ? WHERE id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(insetQuery);
+            stmt.setString(1, ad.getTitle());
+            stmt.setString(2, ad.getDescription());
+            stmt.setInt(3, ad.getPrice());
+            stmt.setLong(4, ad.getCategoryId());
+            stmt.setString(5, ad.getImageUrl());
+            stmt.setLong(6, ad.getId());
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error editing ad", e);
+        }
+    }
+
+    ////////// testing //////////////
+    public static void main(String[] args) {
+        Config config = new Config();
+        MySQLUsersDao usersDao = new MySQLUsersDao(config);
+        MySQLAdsDao adsDao = new MySQLAdsDao(config);
+//        String hash = Password.hash("password123");
+//        User user = new User("oscar-ct", "test@email.com", hash, "2108496794");
+//        usersDao.insert(user);
+//        usersDao.delete(2);
+
+        Ad ad = new Ad("matt for sale", "matt", 1,5, "www.google.com", 1 );
+        adsDao.update(ad);
+
+
+
+
+    }
 
 
 
