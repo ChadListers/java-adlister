@@ -16,6 +16,13 @@
         <div class="col-md-6">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
+            <p>$${ad.price}</p>
+<%--            <p>${ad.categoryId}</p>--%>
+            <c:forEach var="cat" items="${categories}">
+                <c:if test="${ad.categoryId == cat.id}">
+                    <p>${cat.category}</p>
+                </c:if>
+            </c:forEach>
         </div>
     </c:forEach>
 </div>
