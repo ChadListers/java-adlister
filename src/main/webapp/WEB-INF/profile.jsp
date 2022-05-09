@@ -15,56 +15,70 @@
         <div class="ms-5">
             <!-- Profile Settings-->
 
-                <div class="w-100">
+                <div class="container">
                     <form class="row">
+
                         <div class="col-12">
                             <div class="form-group">
                                 <label for="account-username">Username</label>
-                                <input class="form-control" type="text" id="account-username" value="${sessionScope.user.username}">
+                                <input class="form-control" type="text" id="account-username" placeholder="${sessionScope.user.username}">
                             </div>
                         </div>
-                        <div class="col-md-6">
+
+                        <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="account-fn">First Name</label>
-                                <input class="form-control" type="text" id="account-fn" value="* User First name" required="">
+                                <input class="form-control" type="text" id="account-fn" placeholder="* User First name" required="">
                             </div>
                         </div>
-                        <div class="col-md-6">
+
+                        <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="account-ln">Last Name</label>
-                                <input class="form-control" type="text" id="account-ln" value="* User Last Name" required="">
+                                <input class="form-control" type="text" id="account-ln" placeholder="* User Last Name" required="">
                             </div>
+
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="account-email">E-mail Address</label>
-                                <input class="form-control" type="email" id="account-email" value="${sessionScope.user.email}">
+                                <input class="form-control" type="email" id="account-email" placeholder="${sessionScope.user.email}">
                             </div>
                         </div>
-                        <div class="col-md-6">
+
+
+                        <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="account-phone">Phone Number</label>
-                                <input class="form-control" type="text" id="account-phone" value="${sessionScope.user.phoneNumber}" required="">
+                                <input class="form-control" type="text" id="account-phone" placeholder="${sessionScope.user.phoneNumber}" required="">
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="account-pass">New Password</label>
-                                <input class="form-control" type="password" id="account-pass">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="account-confirm-pass">Confirm Password</label>
-                                <input class="form-control" type="password" id="account-confirm-pass">
-                            </div>
-                        </div>
+
+
+<%--                        <div class="col-md-6">--%>
+<%--                            <div class="form-group">--%>
+<%--                                <label for="account-pass">New Password</label>--%>
+<%--                                <input class="form-control" type="password" id="account-pass">--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+
+
+<%--                        <div class="col-md-6">--%>
+<%--                            <div class="form-group">--%>
+<%--                                <label for="account-confirm-pass">Confirm Password</label>--%>
+<%--                                <input class="form-control" type="password" id="account-confirm-pass">--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+
+
                         <div class="col-12">
-                            <hr class="mt-2 mb-3">
+                            <hr class="mt-3 mb-3">
                             <div class="d-flex flex-wrap justify-content-between align-items-center">
                                 <button class="btn btn-style-1 btn-primary" type="button" data-toast="" data-toast-position="topRight" data-toast-type="success" data-toast-icon="fe-icon-check-circle" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">Update Profile</button>
                             </div>
                         </div>
+
+
                     </form>
                 </div>
             </div>
