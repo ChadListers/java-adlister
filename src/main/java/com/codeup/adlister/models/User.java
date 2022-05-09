@@ -23,6 +23,14 @@ public class User implements Serializable {
         this.isAdmin = isAdmin;
     }
 
+    public User(String username, String email, String password, String phoneNumber, long id) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.phoneNumber = phoneNumber;
+        this.id = id;
+    }
+
     public User(String username, String email, String password, String phoneNumber, boolean isAdmin) {
         this.username = username;
         this.email = email;

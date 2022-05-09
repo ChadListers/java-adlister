@@ -1,5 +1,6 @@
 package com.codeup.adlister.dao;
 
+import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
@@ -86,6 +87,23 @@ public class MySQLUsersDao implements Users {
             rs.getString("phone_number"),
             rs.getBoolean("is_admin")
         );
+    }
+
+
+    @Override
+    public void update(User user) {
+        String insetQuery = "UPDATE chadlister_db.users SET username = ?, email = ?, phone_number= ?, password = ? WHERE id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(insetQuery);
+            stmt.setString(1, user.getUsername());
+            stmt.setString(2, user.getEmail());
+            stmt.setString(3, user.getPhoneNumber());
+            stmt.setString(4, user.getPassword());
+            stmt.setLong(5, user.getId());
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error editing user", e);
+        }
     }
 
 }
