@@ -32,6 +32,15 @@ public class Ad implements Serializable {
         this.imageUrl = imageUrl;
     }
 
+    public Ad(long categoryId, String title, String description, int price, String imageUrl) {
+
+        this.categoryId = categoryId;
+        this.title = title;
+        this.description = description;
+        this.price = price;
+        this.imageUrl = imageUrl;
+    }
+
     public Ad(long id, long userId, String title, String description) {
         this.id = id;
         this.userId = userId;

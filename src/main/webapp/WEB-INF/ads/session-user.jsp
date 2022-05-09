@@ -34,9 +34,9 @@
                 <input type="hidden" name="delete" value="${ad.id}">
                 <button>Delete</button>
             </form>
-            <form action="/profile/ads" method="get">
-                <input type="hidden" name="delete" value="${ad.id}">
-                <button>Delete</button>
+            <form action="/profile/ads/edit" method="get">
+                <input type="hidden" name="edit" value="${ad.id}">
+                <button>Edit</button>
             </form>
 
         </div>
