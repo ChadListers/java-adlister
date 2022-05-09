@@ -189,12 +189,12 @@
             <div class="col-xs-6 col-md-3">
                 <h6>Categories</h6>
                 <ul class="footer-links">
-                    <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-                    <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-                    <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-                    <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-                    <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-                    <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+                    <li><a href="https://google.com/">C</a></li>
+                    <li><a href="https://google.com/">UI Design</a></li>
+                    <li><a href="https://google.com/">PHP</a></li>
+                    <li><a href="https://google.com/">Java</a></li>
+                    <li><a href="https://google.com/">Android</a></li>
+                    <li><a href="https://google.com/">Templates</a></li>
                 </ul>
             </div>
 
