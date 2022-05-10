@@ -44,7 +44,7 @@
         color: #AAA;
     }
 
-    div.container
+    div.navbar
     {
         font-family: Raleway;
         margin: 0 auto;
@@ -52,11 +52,11 @@
         text-align: center;
     }
 
-    div.container a
+    div.navbar a
     {
         color: #FFF;
         text-decoration: none;
-        font: 20px Raleway;
+        font: 24px Raleway;
         margin: 0px 10px;
         padding: 10px 10px;
         position: relative;
@@ -103,6 +103,10 @@
 
 
     /*PROFILE CSS */
+
+    #header {
+        font-family: Raleway;
+    }
 
 
 
