@@ -12,8 +12,20 @@ import java.io.IOException;
 @WebServlet(name = "controllers.AdsIndexServlet", urlPatterns = "/ads")
 public class AdsIndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        String favoriteColor = request.getParameter("search");
+//        request.setAttribute("ads", DaoFactory.getAdsDao().findAdByName(favoriteColor));
         request.setAttribute("ads", DaoFactory.getAdsDao().all());
+
+        if(favoriteColor != null) {
+            request.setAttribute("ads", DaoFactory.getAdsDao().findAdByName(favoriteColor));
+        }
         request.setAttribute("categories", DaoFactory.getCategoriesDao().all());
+
+
+
+
+
         request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
     }
 }

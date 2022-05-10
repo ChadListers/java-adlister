@@ -125,6 +125,8 @@
 
 
 
+
+
     @media screen and (max-width: 768px) {
         #profile-info {
             width: 90% !important;
