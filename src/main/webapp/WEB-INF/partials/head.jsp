@@ -109,6 +109,13 @@
     }
 
 
+    /*HOME CSS*/
+
+    .indigo-text {
+        color: #3f51b5;
+    }
+
+
 
     @media screen and (max-width: 768px) {
         #profile-info {
