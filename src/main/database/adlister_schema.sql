@@ -18,6 +18,8 @@ CREATE TABLE IF NOT EXISTS users (
     email VARCHAR(100) NOT NULL,
     password VARCHAR(200) NOT NULL,
     phone_number CHAR(20),
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
     is_admin TINYINT DEFAULT '0',
     PRIMARY KEY (id)
 );

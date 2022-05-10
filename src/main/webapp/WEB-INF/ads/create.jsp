@@ -25,8 +25,11 @@
             <div class="form-group">
                 <label for="category">Select Category:</label>
                 <select name="category" id="category">
-                    <option value="1">N/A</option>
-                    <option value="2">Cars + Trucks</option>
+                    <option value="1">Retro Gaming</option>
+                    <option value="2">Collectibles</option>
+                    <option value="3">Peripherals</option>
+                    <option value="4">PC Gaming</option>
+                    <option value="5">Home Console</option>
                 </select>
             </div>
             <div class="form-group">
