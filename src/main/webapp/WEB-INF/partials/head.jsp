@@ -108,6 +108,14 @@
         font-family: Raleway;
     }
 
+    .link-button {
+        background: none;
+        border: none;
+        color: #1a0dab;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
 
     /*HOME CSS*/
 
