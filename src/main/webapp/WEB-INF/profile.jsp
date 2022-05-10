@@ -118,11 +118,17 @@
                                         </c:forEach>
                                             <p>${ad.description}</p>
                                             <p>$${ad.price}</p>
+                                        <form action="/profile/ads" method="post">
+                                            <input type="hidden" name="delete" value="${ad.id}">
+                                            <button>Delete</button>
+                                        </form>
+                                        <form action="/profile/ads/edit" method="get">
+                                            <input type="hidden" name="edit" value="${ad.id}">
+                                            <button>Edit</button>
+                                        </form>
                                     </div>
                                 </div>
-
                             </div>
-
                         </c:forEach>
 
                     </div>
