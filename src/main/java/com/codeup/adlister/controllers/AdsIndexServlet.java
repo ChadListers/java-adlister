@@ -16,7 +16,7 @@ public class AdsIndexServlet extends HttpServlet {
         String query = request.getParameter("search");
 //        request.setAttribute("ads", DaoFactory.getAdsDao().findAdByName(favoriteColor));
         request.setAttribute("ads", DaoFactory.getAdsDao().all());
-
+        request.setAttribute("users", DaoFactory.getUsersDao().all());
         if(query != null) {
             request.setAttribute("ads", DaoFactory.getAdsDao().findAdByName(query));
         }
