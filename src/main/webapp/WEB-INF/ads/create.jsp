@@ -4,36 +4,43 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Create a new Ad" />
     </jsp:include>
+
+<%--    <jsp:include page="/WEB-INF/partials/head.jsp">--%>
+<%--        <jsp:param name="title" value="Viewing All The Ads" />--%>
+<%--    </jsp:include>--%>
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-    <div class="container">
+
+    <div class="container w-50 card px-3 py-5 mt-3">
         <h1>Create a new Ad</h1>
         <form action="/ads/create" method="post">
-            <div class="form-group">
+            <div class="form-group py-1">
                 <label for="title">Title</label>
                 <input id="title" name="title" class="form-control" type="text">
             </div>
-            <div class="form-group">
+            <div class="form-group py-1">
                 <label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
-            <div class="form-group">
+            <div class="form-group py-1">
                 <label for="price">List Price</label>
                 <input id="price" name="price" class="form-control" type="number">
             </div>
-            <div class="form-group">
+            <div class="form-group py-1">
                 <label for="category">Select Category:</label>
                 <select name="category" id="category">
                     <option value="1">N/A</option>
                     <option value="2">Cars + Trucks</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div class="form-group py-1">
                 <label for="image">Image Url</label>
                 <input id="image" name="image" class="form-control" type="url">
             </div>
+            <div class="py-2 text-end">
             <input type="submit" class="btn btn-block btn-primary">
+            </div>
         </form>
     </div>
 </body>

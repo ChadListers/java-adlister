@@ -13,12 +13,12 @@ import java.io.IOException;
 public class AdsIndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String favoriteColor = request.getParameter("search");
+        String query = request.getParameter("search");
 //        request.setAttribute("ads", DaoFactory.getAdsDao().findAdByName(favoriteColor));
         request.setAttribute("ads", DaoFactory.getAdsDao().all());
 
-        if(favoriteColor != null) {
-            request.setAttribute("ads", DaoFactory.getAdsDao().findAdByName(favoriteColor));
+        if(query != null) {
+            request.setAttribute("ads", DaoFactory.getAdsDao().findAdByName(query));
         }
         request.setAttribute("categories", DaoFactory.getCategoriesDao().all());
 
