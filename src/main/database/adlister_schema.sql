@@ -42,3 +42,9 @@ CREATE TABLE IF NOT EXISTS ads (
     FOREIGN KEY (user_id) REFERENCES users (id),
     FOREIGN KEY (category_id) REFERENCES category (id)
 );
+
+ALTER TABLE users
+ADD first_name VARCHAR(100);
+
+ALTER TABLE users
+ADD last_name VARCHAR(100);

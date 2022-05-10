@@ -85,6 +85,8 @@ public class MySQLUsersDao implements Users {
             rs.getString("email"),
             rs.getString("password"),
             rs.getString("phone_number"),
+            rs.getString("first_name"),
+            rs.getString("last_name"),
             rs.getBoolean("is_admin")
         );
     }
@@ -92,7 +94,7 @@ public class MySQLUsersDao implements Users {
 
     @Override
     public void update(User user) {
-        String insetQuery = "UPDATE chadlister_db.users SET username = ?, email = ?, phone_number= ?, password = ? WHERE id = ?";
+        String insetQuery = "UPDATE chadlister_db.users SET username = ?, email = ?, phone_number= ?, password = ?, first_name = ?, last_name= ? WHERE id = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(insetQuery);
             stmt.setString(1, user.getUsername());
@@ -100,6 +102,7 @@ public class MySQLUsersDao implements Users {
             stmt.setString(3, user.getPhoneNumber());
             stmt.setString(4, user.getPassword());
             stmt.setLong(5, user.getId());
+            stmt.setString(6, user.getFirst_name());
             stmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException("Error editing user", e);
