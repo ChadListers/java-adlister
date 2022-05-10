@@ -11,6 +11,13 @@
 <body>
 <!--NAVBAR JSP-->
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<!--SEARCH BAR-->
+<div class="d-flex justify-content-center mt-4">
+    <div class="input-group w-50">
+        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <button type="button" class="btn btn-outline-dark">search</button>
+    </div>
+</div>
 <%--THIS CONTAINER CONTAINS THE ADS & CATEGORIES--%>
 <div class="container d-flex">
     <!--CATEGORIES-->
