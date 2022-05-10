@@ -34,14 +34,14 @@
                         <div class="col-lg-12 pt-3">
                             <div class="form-group">
                                 <label for="account-fn">First Name</label>
-                                <input disabled class="form-control" type="text" id="account-fn" placeholder="* User First name" required="">
+                                <input disabled class="form-control" type="text" id="account-fn" placeholder="${sessionScope.user.first_name}" required="">
                             </div>
                         </div>
 
                         <div class="col-lg-12 pt-3">
                             <div class="form-group">
                                 <label for="account-ln">Last Name</label>
-                                <input disabled class="form-control" type="text" id="account-ln" placeholder="* User Last Name" required="">
+                                <input disabled class="form-control" type="text" id="account-ln" placeholder="${sessionScope.user.last_name}" required="">
                             </div>
 
                         </div>
