@@ -120,6 +120,11 @@
                                 <div class="card-body">
                                         <%--line 21 is to grab the title of the ad below are more db grabbers--%>
                                     <h5 class="card-title">${ad.title}</h5>
+                                        <c:forEach var="user" items="${users}">
+                                            <c:if test="${ad.userId == user.id}">
+                                                <h6>@${user.username}</h6>
+                                            </c:if>
+                                        </c:forEach>
                                     <c:forEach var="cat" items="${categories}">
                                         <c:if test="${ad.categoryId == cat.id}">
                                             <p>${cat.category}</p>

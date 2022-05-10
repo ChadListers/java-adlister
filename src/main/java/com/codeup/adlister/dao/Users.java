@@ -9,4 +9,5 @@ public interface Users {
     Long insert(User user);
     void delete(long id);
     void update(User user);
+    List<User> all();
 }
