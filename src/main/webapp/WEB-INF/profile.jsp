@@ -107,9 +107,9 @@
 
                         <c:forEach var="ad" items="${myads}">
                             <div class="d-flex flex-wrap">
-                                <div class="card mb-3 mx-1" style="width: 300px">
-                                    <img src="https://camo.githubusercontent.com/826133902a4cb45a0c1618a361649568f4da6de5c33b0417549cb2f04e7e2918/68747470733a2f2f7261776769742e636f6d2f6a616e74696d6f6e2f7376672d706c616365686f6c6465722f6d61737465722f6578616d706c652e737667" class="card-img-top" alt="..." style="width: 300px; height: 200px">
-                                    <div class="card-body">
+                                <div class="card mb-3 mt-1" style="width: 300px">
+                                    <img id="img" src="${ad.imageUrl}" class="card-img-top" alt="..." style="width: 298px; height: 200px">
+                                    <div class=" d-flex flex-column card-body px-1 py-0">
                                         <h5 class="card-title">${ad.title}</h5>
                                         <c:forEach var="cat" items="${categories}">
                                             <c:if test="${ad.categoryId == cat.id}">
@@ -118,27 +118,24 @@
                                         </c:forEach>
                                             <p>${ad.description}</p>
                                             <p>$${ad.price}</p>
-                                        <form action="/profile/ads" method="post">
+
+                                    <div class="mt-auto d-flex justify-content-between align-items-end">
+                                        <form class="mb-1" action="/profile/ads" method="post">
                                             <input type="hidden" name="delete" value="${ad.id}">
                                             <button>Delete</button>
                                         </form>
-                                        <form action="/profile/ads/edit" method="get">
+                                        <form class="mb-1" action="/profile/ads/edit" method="get">
                                             <input type="hidden" name="edit" value="${ad.id}">
                                             <button>Edit</button>
                                         </form>
+                                    </div>
+
                                     </div>
                                 </div>
                             </div>
                         </c:forEach>
 
                     </div>
-
-
-
-
-
-
-
 
                 </div>
             </div>

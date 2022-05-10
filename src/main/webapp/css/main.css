@@ -103,6 +103,12 @@ div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
     cursor: pointer;
 }
 
+img {
+    width: 150px;
+    height: 150px;
+}
+
+
 
 /*HOME CSS*/
 
