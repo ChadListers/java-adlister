@@ -201,11 +201,11 @@
             <div class="col-xs-6 col-md-3">
                 <h6>Quick Links</h6>
                 <ul class="footer-links">
-                    <li><a href="http://scanfcode.com/about/">About Us</a></li>
-                    <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-                    <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-                    <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-                    <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+                    <li><a href="https://google.com/">About Us</a></li>
+                    <li><a href="https://google.com/">Contact Us</a></li>
+                    <li><a href="https://google.com/">Contribute</a></li>
+                    <li><a href="https://google.com/">Privacy Policy</a></li>
+                    <li><a href="https://google.com/">Sitemap</a></li>
                 </ul>
             </div>
         </div>
