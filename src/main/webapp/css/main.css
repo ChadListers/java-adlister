@@ -103,9 +103,12 @@ div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
     cursor: pointer;
 }
 
-img {
-    width: 150px;
-    height: 150px;
+h1 {
+    font-weight: lighter!important;
+}
+
+#form-bg {
+    background: whitesmoke;
 }
 
 
