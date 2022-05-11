@@ -72,12 +72,12 @@
 
                     <div class="col-12 pt-5">
                         <%--                            <ul class="footer-links">--%>
-                        <h2 class="indigo-text">Categories</h2>
-                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="https://google.com/">cars</a></h3>
-                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="https://google.com/">instruments</a></h3>
-                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="https://google.com/">gaming</a></h3>
-                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="https://google.com/">people</a></h3>
-                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="https://google.com/">furniture</a></h3>
+                        <h1>Categories</h1>
+                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="https://www.google.com/search?q=retro+gaming">Retro Gaming</a></h3>
+                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="https://google.com/">Collectibles</a></h3>
+                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="https://google.com/">Peripherals</a></h3>
+                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="https://google.com/">PC Gaming</a></h3>
+                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="https://google.com/">Home Consoles</a></h3>
                         <%--                            </ul>--%>
                     </div>
 
@@ -105,7 +105,7 @@
                 <div class="d-flex justify-content-center pt-4 pb-4">
                         <form class="input-group w-75" method="get" action="/ads">
                             <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" name="search" />
-                            <button type="submit" class="btn btn-outline-dark">search</button>
+                            <button type="submit" class="btn btn-outline-dark">Search</button>
                         </form>
                 </div>
 
@@ -154,9 +154,10 @@
 
 
 
-
+<div class="container">
     <jsp:include page="/footer.jsp">
         <jsp:param name="title" value="Viewing All The Ads" />
     </jsp:include>
+</div>
 </body>
 </html>
