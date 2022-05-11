@@ -221,10 +221,10 @@
 
             <div class="col-md-4 col-sm-6 col-xs-12 d-flex">
                 <ul class="social-icons">
-                    <li><a class="github" href="#"><i class="fa fa-github mt-2"></i></a></li>
-                    <li><a class="twitter" href="#"><i class="fa fa-twitter mt-2"></i></a></li>
+                    <li><a class="github" href="https://github.com/ChadListers"><i class="fa fa-github mt-2"></i></a></li>
+                    <li><a class="twitter" href=https://twitter.com/Chadlisters><i class="fa fa-twitter mt-2"></i></a></li>
                     <li><a class="dribbble" href="#"><i class="fa fa-dribbble mt-2"></i></a></li>
-                    <li><a class="linkedin" href="#"><i class="fa fa-linkedin mt-2"></i></a></li>
+                    <li><a class="linkedin" href="https://www.linkedin.com/in/javier-ruedas-2461631a/"><i class="fa fa-linkedin mt-2"></i></a></li>
                 </ul>
             </div>
         </div>
