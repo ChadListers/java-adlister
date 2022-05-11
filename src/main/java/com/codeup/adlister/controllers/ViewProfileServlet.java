@@ -35,9 +35,16 @@ public class ViewProfileServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        long deleteId = Long.parseLong(req.getParameter("delete"));
-        DaoFactory.getAdsDao().delete(deleteId);
-        resp.sendRedirect("/profile");
+        long userId = Long.parseLong(req.getParameter("delete-user"));
+        DaoFactory.getUsersDao().delete(userId);
+        req.getSession().invalidate();
+        resp.sendRedirect("/");
+
+
+
+//        long deleteId = Long.parseLong(req.getParameter("delete"));
+//        DaoFactory.getAdsDao().delete(deleteId);
+//        resp.sendRedirect("/profile");
 
 
     }
