@@ -22,41 +22,46 @@
 <%--    </c:if>--%>
 <%--</c:forEach>--%>
 
-<div class="container">
-    <h1>Create a new Ad</h1>
+<div id="form-bg" class="container w-50 card px-3 py-5 mt-3">
+    <h1 class="text-center">Edit Ad</h1>
     <form action="/profile/ads/edit" method="post">
-        <div class="form-group">
+        <div class="form-group py-1">
             <label for="title">Title</label>
             <input id="title" name="title" class="form-control" type="text" value="${adToEdit.title}">
         </div>
-        <div class="form-group">
+        <div class="form-group py-1">
             <label for="description">Description</label>
-            <input id="description" name="description" class="form-control" value="${adToEdit.description}" type="text">
+            <input style="height:100px;" id="description" name="description" class="form-control" value="${adToEdit.description}" type="text">
         </div>
-        <div class="form-group">
+        <div class="form-group py-1">
             <label for="price">List Price</label>
             <input id="price" name="price" class="form-control" type="number" value="${adToEdit.price}">
         </div>
-        <div class="form-group">
+        <div class="form-group py-1">
             <label for="category">Select Category:</label>
-            <select name="category" id="category">
-                <option value="${adToEdit.categoryId}">
+            <select class="form-select" name="category" id="category">
+                <option value="${adToEdit.categoryId}">---
                     <c:forEach var="cat" items="${categories}">
                         <c:if test="${adToEdit.categoryId == cat.id}">
                             ${cat.category}
                         </c:if>
-                    </c:forEach>
+                    </c:forEach>---
                 </option>
-                <option value="2">Cars + Trucks</option>
-                <option value="3">Appliances</option>
+                <option value="1">Retro Gaming</option>
+                <option value="2">Collectibles</option>
+                <option value="3">Peripherals</option>
+                <option value="4">PC Gaming</option>
+                <option value="5">Home Console</option>
             </select>
         </div>
-        <div class="form-group">
+        <div class="form-group py-1">
             <label for="image">Image Url</label>
             <input id="image" name="image" class="form-control" type="url" value="${adToEdit.imageUrl}">
             <input id="id" name="adId" class="form-control" type="hidden" value="${adToEdit.id}">
         </div>
-        <input type="submit" class="btn btn-block btn-primary">
+        <div class="py-2 text-end">
+            <input type="submit" class="btn btn-block btn-primary">
+        </div>
     </form>
 </div>
 </body>
