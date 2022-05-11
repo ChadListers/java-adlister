@@ -103,11 +103,12 @@
 
 
 
-                    <div class="container d-flex flex-wrap justify-content-around px-0">
+                    <div class="container d-flex flex-wrap justify-content-around px-0" >
 
                         <c:forEach var="ad" items="${myads}">
                             <div class="d-flex flex-wrap">
                                 <div class="card mb-3 mt-1" style="width: 300px">
+<%--                                <div class="card mb-3 mt-1" style="width: 300px" onclick="document.getElementById('formEdit').submit();">--%>
                                     <img id="img" src="${ad.imageUrl}" class="card-img-top" alt="..." style="width: 298px; height: 200px">
                                     <div class=" d-flex flex-column card-body px-1 py-0">
                                         <h5 class="card-title">${ad.title}</h5>
@@ -124,7 +125,7 @@
                                             <input type="hidden" name="delete" value="${ad.id}">
                                             <button onclick="return confirm('Are you sure you want to delete this item?');">Delete</button>
                                         </form>
-                                        <form class="mb-1" action="/profile/ads/edit" method="get">
+                                        <form id="formEdit" class="mb-1" action="/profile/ads/edit" method="get">
                                             <input type="hidden" name="edit" value="${ad.id}">
                                             <button>Edit</button>
                                         </form>

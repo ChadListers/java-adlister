@@ -73,11 +73,11 @@
                     <div class="col-12 pt-5">
                         <%--                            <ul class="footer-links">--%>
                         <h1>Categories</h1>
-                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="http://localhost:8080/ads?1">Retro Gaming</a></h3>
-                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="http://localhost:8080/ads?2">Collectibles</a></h3>
-                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="http://localhost:8080/ads?3">Peripherals</a></h3>
-                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="http://localhost:8080/ads?4">PC Gaming</a></h3>
-                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="http://localhost:8080/ads?5">Home Consoles</a></h3>
+                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=1">Retro Gaming</a></h5>
+                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=2">Collectibles</a></h5>
+                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=3">Peripherals</a></h5>
+                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=4">PC Gaming</a></h5>
+                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=5">Home Consoles</a></h5>
                         <%--                            </ul>--%>
                     </div>
 
@@ -114,15 +114,15 @@
                 <div class="container d-flex flex-wrap justify-content-around px-0">
 
                     <c:forEach var="ad" items="${ads}">
-                        <div class="d-flex flex-wrap">
+                        <a class="text-decoration-none" style="color: black" href="/ad?${ad.id}"><div class="d-flex flex-wrap">
                             <div class="card mb-3 mx-1" style="width: 300px">
-                                <img src="${ad.imageUrl}" class="card-img-top" alt="..." style="width: 300px; height: 200px">
+                                <img src="${ad.imageUrl}" class="card-img-top" alt="..." style="width: 298px; height: 200px">
                                 <div class="card-body">
                                         <%--line 21 is to grab the title of the ad below are more db grabbers--%>
                                     <h5 class="card-title">${ad.title}</h5>
                                         <c:forEach var="user" items="${users}">
                                             <c:if test="${ad.userId == user.id}">
-                                                <h6>@${user.username}</h6>
+                                                <p><small class="text-muted">Posted by: ${user.username}</small></p>
                                             </c:if>
                                         </c:forEach>
                                     <c:forEach var="cat" items="${categories}">
@@ -134,7 +134,7 @@
                                     <p>$${ad.price}</p>
                                 </div>
                             </div>
-                        </div>
+                        </div></a>
                         <%--AD CONTAINER ENDS HERE--%>
                     </c:forEach>
 
@@ -154,10 +154,9 @@
 
 
 
-<div class="container">
-    <jsp:include page="/footer.jsp">
-        <jsp:param name="title" value="Viewing All The Ads" />
-    </jsp:include>
+<div class="container-fluid">
+    <jsp:include page="/footer.jsp"/>
+
 </div>
 </body>
 </html>
