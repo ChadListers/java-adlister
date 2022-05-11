@@ -13,7 +13,7 @@
 <%--</nav>--%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<div class="navbar container-fluid indigo topBotomBordersIn d-flex>">
+<div class="navbar container-fluid nav-85 indigo topBotomBordersIn d-flex >">
     <div class=" m-auto w-75">
     <c:if test="${sessionScope.user != null}">
         <a href="/">Home</a>
