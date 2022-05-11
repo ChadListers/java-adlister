@@ -43,22 +43,24 @@ public class EditUserServlet extends HttpServlet {
         String phone = request.getParameter("phone");
         String password = request.getParameter("password");
         String passwordConfirmation = request.getParameter("confirm_password");
-        String hash = Password.hash(password);
+        String firstName = request.getParameter("first-name");
+        String lastName = request.getParameter("last-name");
+//        String hash = Password.hash(password);
         long id = Long.parseLong(request.getParameter("id"));
 
 
         // validate input
-        boolean inputHasErrors = username.isEmpty()
-                || email.isEmpty()
-                || password.isEmpty()
-                || (! password.equals(passwordConfirmation));
+//        boolean inputHasErrors = username.isEmpty()
+//                || email.isEmpty()
+//                || password.isEmpty()
+//                || (! password.equals(passwordConfirmation));
+//
+//        if (inputHasErrors) {
+//            response.sendRedirect("/profile/edit");
+//            return;
+//        }
 
-        if (inputHasErrors) {
-            response.sendRedirect("/profile/edit");
-            return;
-        }
-
-        User user = new User(username, email, hash, phone, id);
+        User user = new User(id, username, email, phone, firstName, lastName);
         DaoFactory.getUsersDao().update(user);
         request.getSession().invalidate();
         response.sendRedirect("/login");

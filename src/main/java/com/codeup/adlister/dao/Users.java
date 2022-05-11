@@ -9,5 +9,6 @@ public interface Users {
     Long insert(User user);
     void delete(long id);
     void update(User user);
+    void updatePassword(User user);
     List<User> all();
 }
