@@ -83,6 +83,11 @@
                                 <form method="get" action="/profile/edit">
                                 <button class="btn btn-style-1 btn-primary">Edit Info</button>
                                 </form>
+
+                                <form method="post" action="/profile">
+                                    <input type="hidden" name="delete-user" value="${sessionScope.user.id}">
+                                    <button class="btn btn-style-1 btn-danger" onclick="return confirm('Are you sure you want to permanently delete this account?');">Delete Account</button>
+                                </form>
                             </div>
                         </div>
 
@@ -121,10 +126,10 @@
                                             <p style="font-weight: bold; color: green">$${ad.price}</p>
 
                                     <div class="mt-auto d-flex justify-content-between align-items-end">
-                                        <form id="formDelete" class="mb-1" action="/profile" method="post">
+                                        <form id="formDelete" class="mb-1" action="/ads/delete" method="post">
                                             <input type="hidden" name="delete" value="${ad.id}">
 <%--                                            <button onclick="return confirm('Are you sure you want to delete this item?');">Delete</button>--%>
-                                            <button onclick="return confirm('Are you sure you want to delete this item?');"class="button-85" role="button"><i class="fa-solid fa-trash-can"></i></button>
+                                            <button onclick="return confirm('Are you sure you want to delete this item?');" class="button-85" role="button"><i class="fa-solid fa-trash-can"></i></button>
                                         </form>
                                         <form id="formEdit" class="mb-1" action="/profile/ads/edit" method="get">
                                             <input type="hidden" name="edit" value="${ad.id}">

@@ -45,6 +45,21 @@ CREATE TABLE IF NOT EXISTS ads (
     FOREIGN KEY (category_id) REFERENCES category (id)
 );
 
+
+CREATE TABLE IF NOT EXISTS ads (
+   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+   user_id INT UNSIGNED DEFAULT NULL,
+   category_id INT UNSIGNED DEFAULT NULL,
+   title VARCHAR(250) NOT NULL,
+   description TEXT NOT NULL,
+   price INT UNSIGNED NOT NULL,
+   image_url VARCHAR(250),
+   PRIMARY KEY (id),
+   FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
+   FOREIGN KEY (category_id) REFERENCES category (id)
+);
+
+
 ALTER TABLE users
 ADD first_name VARCHAR(100);
 
