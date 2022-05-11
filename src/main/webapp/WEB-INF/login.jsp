@@ -7,8 +7,8 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-    <div class="container w-50 card px-3 py-5 mt-3">
-        <h1>Please Log In</h1>
+    <div id="form-bg" class="container w-50 card px-3 py-5 mt-3">
+        <h1 class="text-center">Log In</h1>
         <form action="/login" method="POST">
             <div class="form-group py-1">
                 <label for="username">Username</label>
