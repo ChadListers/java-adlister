@@ -20,8 +20,7 @@
             </div>
             <div class="form-group py-1">
                 <label for="phone">Phone Number (optional) </label>
-                <input id="phone" name="phone" class="form-control" type="tel"        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                       required>
+                <input id="phone" name="phone" class="form-control" type="tel"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
             </div>
             <div class="form-group py-1">
                 <label for="password">Password *</label>

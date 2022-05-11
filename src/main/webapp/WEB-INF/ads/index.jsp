@@ -131,7 +131,7 @@
                                         </c:if>
                                     </c:forEach>
                                     <p>${ad.description}</p>
-                                    <p>$${ad.price}</p>
+                                    <p style="color: green; font-weight: bold">$${ad.price}</p>
                                 </div>
                             </div>
                         </div></a>
