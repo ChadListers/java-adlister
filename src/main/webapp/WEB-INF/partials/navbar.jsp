@@ -18,7 +18,7 @@
         <a href="/">Home</a>
         <a href="/profile">My Profile</a>
 <%--        <a href="/ads">Ads</a>--%>
-        <a href="/profile/ads">My Ads</a>
+<%--        <a href="/profile/ads">My Ads</a>--%>
         <a href="/ads/create">Create Ad</a>
     </c:if>
 
