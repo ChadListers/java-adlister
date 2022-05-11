@@ -53,7 +53,7 @@ public class EditAdsServlet extends HttpServlet {
                 adId
         );
         DaoFactory.getAdsDao().update(ad);
-        response.sendRedirect("/profile/ads");
+        response.sendRedirect("/profile");
     }
 
 
