@@ -14,6 +14,7 @@ public class AdsIndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String query = request.getParameter("search");
+        System.out.println(query);
 //        request.setAttribute("ads", DaoFactory.getAdsDao().findAdByName(favoriteColor));
         request.setAttribute("ads", DaoFactory.getAdsDao().all());
         request.setAttribute("users", DaoFactory.getUsersDao().all());
@@ -21,10 +22,17 @@ public class AdsIndexServlet extends HttpServlet {
             request.setAttribute("ads", DaoFactory.getAdsDao().findAdByName(query));
         }
         request.setAttribute("categories", DaoFactory.getCategoriesDao().all());
-        if(request.getQueryString() != null) {
-            request.setAttribute("ads", DaoFactory.getAdsDao().adsByCategoriesId(Long.parseLong(request.getQueryString())));
+
+//        if(request.getQueryString() != null) {
+//            request.setAttribute("ads", DaoFactory.getAdsDao().adsByCategoriesId(Long.parseLong(request.getQueryString())));
+//        }
+//        System.out.println(request.getQueryString());
+
+
+        if(request.getParameter("catid") != null) {
+            long catId = Long.parseLong(request.getParameter("catid"));
+            request.setAttribute("ads", DaoFactory.getAdsDao().adsByCategoriesId(catId));
         }
-        System.out.println(request.getQueryString());
 
 
         request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);

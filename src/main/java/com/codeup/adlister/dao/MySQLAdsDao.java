@@ -52,6 +52,18 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+
+    public List<Ad> allByAdId(long id) {
+        String query = "SELECT * FROM chadlister_db.ads WHERE id =" + id;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            ResultSet rs = preparedStatement.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving specific ad.", e);
+        }
+    }
+
     public List<Ad> adsByCategoriesId(long id) {
         String query = "SELECT * FROM chadlister_db.ads WHERE category_id =" + id;
         try {
