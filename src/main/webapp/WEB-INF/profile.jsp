@@ -120,9 +120,9 @@
                                             <p>$${ad.price}</p>
 
                                     <div class="mt-auto d-flex justify-content-between align-items-end">
-                                        <form class="mb-1" action="/profile/ads" method="post">
+                                        <form id="formDelete" class="mb-1" action="/profile" method="post">
                                             <input type="hidden" name="delete" value="${ad.id}">
-                                            <button>Delete</button>
+                                            <button onclick="return confirm('Are you sure you want to delete this item?');">Delete</button>
                                         </form>
                                         <form class="mb-1" action="/profile/ads/edit" method="get">
                                             <input type="hidden" name="edit" value="${ad.id}">
@@ -140,9 +140,8 @@
                 </div>
             </div>
         </div>
-
-
     </div>
-<jsp:include page="partials/bootstrap-script.jsp"/>
+
+    <%--<jsp:include page="partials/bootstrap-script.jsp"/>--%>
 </body>
 </html>
