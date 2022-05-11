@@ -69,6 +69,7 @@ public class MySQLCategoriesDao implements Categories {
     }
 
 
+
     private Category extractCategory(ResultSet rs) throws SQLException {
         return new Category(
                 rs.getLong("id"),

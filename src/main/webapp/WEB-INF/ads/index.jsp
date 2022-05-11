@@ -73,11 +73,11 @@
                     <div class="col-12 pt-5">
                         <%--                            <ul class="footer-links">--%>
                         <h1>Categories</h1>
-                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="https://www.google.com/search?q=retro+gaming">Retro Gaming</a></h3>
-                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="https://google.com/">Collectibles</a></h3>
-                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="https://google.com/">Peripherals</a></h3>
-                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="https://google.com/">PC Gaming</a></h3>
-                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="https://google.com/">Home Consoles</a></h3>
+                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="http://localhost:8080/ads?1">Retro Gaming</a></h3>
+                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="http://localhost:8080/ads?2">Collectibles</a></h3>
+                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="http://localhost:8080/ads?3">Peripherals</a></h3>
+                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="http://localhost:8080/ads?4">PC Gaming</a></h3>
+                        <h3 class="cat-list my-5"><a class="text-decoration-underline text-black" href="http://localhost:8080/ads?5">Home Consoles</a></h3>
                         <%--                            </ul>--%>
                     </div>
 
