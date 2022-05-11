@@ -155,9 +155,10 @@
 
 
 <div class="container">
-    <jsp:include page="/footer.jsp">
-        <jsp:param name="title" value="Viewing All The Ads" />
-    </jsp:include>
+    <jsp:include page="/footer.jsp"/>
 </div>
+
+<script src="/js/main.js"></script>
+
 </body>
 </html>
