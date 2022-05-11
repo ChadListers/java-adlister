@@ -13,7 +13,8 @@
 <%--</nav>--%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<div class="navbar container indigo topBotomBordersIn">
+<div class="navbar container-fluid indigo topBotomBordersIn d-flex>">
+    <div class=" m-auto w-75">
     <c:if test="${sessionScope.user != null}">
         <a href="/">Home</a>
         <a href="/profile">My Profile</a>
@@ -32,5 +33,5 @@
         <a href="/logout">Logout</a>
     </c:if>
 
-
+    </div>
 </div>
