@@ -10,20 +10,30 @@ public class User implements Serializable {
     private String email;
     private String password;
     private String phoneNumber;
-    private String first_name;
-    private String last_name;
+    private String firstName;
+    private String lastName;
     private boolean isAdmin;
 
     public User() {}
 
-    public User(long id, String username, String email, String password, String phoneNumber,String first_name,String last_name, boolean isAdmin) {
+    public User(long id, String username, String email, String phoneNumber,String firstName,String lastName) {
+        this.id = id;
+        this.username = username;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.firstName= firstName;
+        this.lastName = lastName;
+
+    }
+
+    public User(long id, String username, String email, String password, String phoneNumber,String firstName,String lastName, boolean isAdmin) {
         this.id = id;
         this.username = username;
         this.email = email;
         this.password = password;
         this.phoneNumber = phoneNumber;
-        this.first_name= first_name;
-        this.last_name = last_name;
+        this.firstName= firstName;
+        this.lastName = lastName;
         this.isAdmin = isAdmin;
     }
 
@@ -56,14 +66,14 @@ public class User implements Serializable {
         setPassword(password);
     }
 
-    public User(long id, String username, String email, String password,String first_name,String last_name) {
-        this.id = id;
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.first_name= first_name;
-        this.last_name=last_name;
-    }
+//    public User(long id, String username, String email, String password,String firstName,String lastName) {
+//        this.id = id;
+//        this.username = username;
+//        this.email = email;
+//        this.password = password;
+//        this.firstName= firstName;
+//        this.lastName = lastName;
+//    }
 
     public String getPhoneNumber() {
         return phoneNumber;
@@ -113,19 +123,19 @@ public class User implements Serializable {
         this.password = Password.hash(password);
     }
 
-    public String getFirst_name() {
-        return first_name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }

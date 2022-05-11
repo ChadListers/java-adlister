@@ -96,20 +96,26 @@ public class MySQLUsersDao implements Users {
 
     @Override
     public void update(User user) {
-        String insetQuery = "UPDATE chadlister_db.users SET username = ?, email = ?, phone_number= ?, password = ?, first_name = ?, last_name= ? WHERE id = ?";
+        String insetQuery = "UPDATE chadlister_db.users SET username = ?, email = ?, phone_number= ?, first_name = ?, last_name= ? WHERE id = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(insetQuery);
             stmt.setString(1, user.getUsername());
             stmt.setString(2, user.getEmail());
             stmt.setString(3, user.getPhoneNumber());
-            stmt.setString(4, user.getPassword());
-            stmt.setLong(5, user.getId());
-            stmt.setString(6, user.getFirst_name());
+            stmt.setString(4, user.getFirstName());
+            stmt.setString(5, user.getLastName());
+            stmt.setLong(6, user.getId());
             stmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException("Error editing user", e);
         }
     }
+
+    @Override
+    public void updatePassword(User user) {
+        //// needs work
+    }
+
     @Override
     public List<User> all() {
         PreparedStatement stmt = null;
