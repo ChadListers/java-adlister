@@ -11,7 +11,7 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-    <h1 id="header" class="text-center pt-3">${sessionScope.user.username}'s profile!</h1>
+    <h1 id="header" class="text-center pt-3"> Welcome, ${sessionScope.user.username}!</h1>
 
     <div class="container d-flex flex-wrap text-center">
 
@@ -118,16 +118,17 @@
                                             </c:if>
                                         </c:forEach>
                                             <p>${ad.description}</p>
-                                            <p>$${ad.price}</p>
+                                            <p style="font-weight: bold; color: green">$${ad.price}</p>
 
                                     <div class="mt-auto d-flex justify-content-between align-items-end">
                                         <form id="formDelete" class="mb-1" action="/profile" method="post">
                                             <input type="hidden" name="delete" value="${ad.id}">
-                                            <button onclick="return confirm('Are you sure you want to delete this item?');">Delete</button>
+<%--                                            <button onclick="return confirm('Are you sure you want to delete this item?');">Delete</button>--%>
+                                            <button onclick="return confirm('Are you sure you want to delete this item?');"class="button-85" role="button"><i class="fa-solid fa-pen-to-square"></i></button>
                                         </form>
                                         <form id="formEdit" class="mb-1" action="/profile/ads/edit" method="get">
                                             <input type="hidden" name="edit" value="${ad.id}">
-                                            <button>Edit</button>
+                                            <button class="button-85" role="button"><i class="fa-solid fa-trash-can"></i></button>
                                         </form>
                                     </div>
 
