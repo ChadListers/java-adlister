@@ -73,25 +73,25 @@
                     <div class="col-12 pt-5">
                         <%--                            <ul class="footer-links">--%>
                         <h2 style="font-weight: lighter">Categories</h2>
-                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads">All</a></h6>
-                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=1">Retro Gaming</a></h6>
-                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=2">Collectibles</a></h6>
-                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=3">Peripherals</a></h6>
-                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=4">PC Gaming</a></h6>
-                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=5">Home Consoles</a></h6>
+                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads">All</a></h5>
+                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=1">Retro Gaming</a></h5>
+                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=2">Collectibles</a></h5>
+                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=3">Peripherals</a></h5>
+                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=4">PC Gaming</a></h5>
+                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=5">Home Consoles</a></h5>
                         <br>
                         <br>
                         <h2 style="font-weight: lighter">List By Price</h2>
-                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?below=50">Under $50</a></h6>
-                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?below=100">Under $100</a></h6>
-                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?below=250">Under $250</a></h6>
-                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?below=500">Under $500</a></h6>
-                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?above=500"> $500 +</a></h6>
+                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?below=50">Under $50</a></h5>
+                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?below=100">Under $100</a></h5>
+                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?below=250">Under $250</a></h5>
+                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?below=500">Under $500</a></h5>
+                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?above=500"> $500 +</a></h5>
                         <br>
                         <br>
                         <h2 style="font-weight: lighter">Sort By Price</h2>
-                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?sort=asc">Low - High</a></h6>
-                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?sort=desc">High - Low</a></h6>
+                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?sort=asc">Low - High</a></h5>
+                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?sort=desc">High - Low</a></h5>
 
 
 
@@ -134,7 +134,7 @@
 
                     <c:forEach var="ad" items="${ads}">
                         <a class="text-decoration-none" style="color: black" href="/ad?${ad.id}"><div class="d-flex flex-wrap">
-                            <div class="card mb-3 mx-1" style="width: 300px">
+                            <div class="card mb-3 mx-1" style="width: 300px;">
                                 <img src="${ad.imageUrl}" class="card-img-top" alt="..." style="width: 298px; height: 200px">
                                 <div class="card-body pb-2">
                                         <%--line 21 is to grab the title of the ad below are more db grabbers--%>
