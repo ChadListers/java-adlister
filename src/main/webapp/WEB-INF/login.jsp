@@ -25,9 +25,13 @@
                 <c:if test="${param.errors != null}">
                     <p style="color: red">Incorrect username or password!</p>
                 </c:if>
-            </div>
-            <div class="py-2 text-end">
-            <input type="submit" class="btn btn-primary btn-block" value="Log In">
+            <div class="d-flex justify-content-between">
+                <div class="pt-4 text-start">
+                    <a href="/">Return to Home</a>
+                </div>
+                <div class="pt-5 text-end">
+                    <input type="submit" class="btn btn-block btn-primary">
+                </div>
             </div>
         </form>
     </div>
