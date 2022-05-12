@@ -17,4 +17,6 @@ public interface Ads {
     void delete(long id);
     void update(Ad ad);
     Ad findAdById(long id);
+    public List<Ad> allByAdPriceBelow(int price);
+    public List<Ad> allByAdPriceAbove(int price);
 }
