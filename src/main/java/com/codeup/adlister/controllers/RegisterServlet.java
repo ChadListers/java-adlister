@@ -31,8 +31,15 @@ public class RegisterServlet extends HttpServlet {
             || password.isEmpty()
             || (! password.equals(passwordConfirmation));
 
+        boolean noPassword = password.isEmpty() || passwordConfirmation.isEmpty();
+
+        if (noPassword) {
+            response.sendRedirect("/register?error");
+            return;
+        }
+
         if (inputHasErrors) {
-            response.sendRedirect("/register");
+            response.sendRedirect("/register?errors");
             return;
         }
 
