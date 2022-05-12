@@ -89,6 +89,31 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
+    public List<Ad> sortPrice(String x) {
+        String query = "SELECT * FROM chadlister_db.ads ORDER BY price " + x;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            ResultSet rs = preparedStatement.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error sorting ads", e);
+        }
+    }
+
+    @Override
+    public void views(int views, long id) {
+        String query = "UPDATE chadlister_db.ads SET views = ? WHERE id = ?";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, views);
+            preparedStatement.setLong(2, id);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error setting views", e);
+        }
+    }
+
+    @Override
     public List<Ad> adsByCategoriesId(long id) {
         String query = "SELECT * FROM chadlister_db.ads WHERE category_id =" + id;
         try {
@@ -177,7 +202,8 @@ public class MySQLAdsDao implements Ads {
             rs.getString("title"),
             rs.getString("description"),
             rs.getInt("price"),
-            rs.getString("image_url")
+            rs.getString("image_url"),
+            rs.getInt("views")
         );
     }
 

@@ -10,7 +10,19 @@ public class Ad implements Serializable {
     private String description;
     private int price;
     private String imageUrl;
+    private int views;
 
+
+    public Ad(long id, long userId, long categoryId, String title, String description, int price, String imageUrl, int views) {
+        this.id = id;
+        this.userId = userId;
+        this.categoryId = categoryId;
+        this.title = title;
+        this.description = description;
+        this.price = price;
+        this.imageUrl = imageUrl;
+        this.views = views;
+    }
 
     public Ad(long id, long userId, long categoryId, String title, String description, int price, String imageUrl) {
         this.id = id;
@@ -61,6 +73,14 @@ public class Ad implements Serializable {
 
 
     public Ad() {}
+
+    public int getViews() {
+        return views;
+    }
+
+    public void setViews(int views) {
+        this.views = views;
+    }
 
     public long getCategoryId() {
         return categoryId;

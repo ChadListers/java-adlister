@@ -71,6 +71,17 @@ public class ListAdsDao implements Ads {
     public List<Ad> allByAdPriceAbove(int price) {
         return null;
     }
+
+    @Override
+    public List<Ad> sortPrice(String x) {
+        return null;
+    }
+
+    @Override
+    public void views(int views, long id) {
+
+    }
+
     /////////////////////////////////////
 
 
