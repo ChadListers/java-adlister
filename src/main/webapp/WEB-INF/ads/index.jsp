@@ -72,21 +72,23 @@
 
                     <div class="col-12 pt-5">
                         <%--                            <ul class="footer-links">--%>
-                        <h1>Categories</h1>
-                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads">All</a></h5>
-                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=1">Retro Gaming</a></h5>
-                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=2">Collectibles</a></h5>
-                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=3">Peripherals</a></h5>
-                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=4">PC Gaming</a></h5>
-                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=5">Home Consoles</a></h5>
-                        <%--                            </ul>--%>
+                        <h2 style="font-weight: lighter">Categories</h2>
+                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads">All</a></h6>
+                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=1">Retro Gaming</a></h6>
+                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=2">Collectibles</a></h6>
+                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=3">Peripherals</a></h6>
+                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=4">PC Gaming</a></h6>
+                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=5">Home Consoles</a></h6>
+                        <br>
+                        <br>
+                        <h2 style="font-weight: lighter">List By Price</h2>
+                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?below=50">Under $50</a></h6>
+                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?below=100">Under $100</a></h6>
+                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?below=250">Under $250</a></h6>
+                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?below=500">Under $500</a></h6>
+                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?above=500"> $500 +</a></h6>
 
 
-                            <!-- Homepage Leaderboard -->
-                            <ins class="adsbygoogle"
-                                 style="display:inline-block;width:300px;height:90px"
-                                 data-ad-client="ca-pub-1234567890123456"
-                                 data-ad-slot="1234567890"></ins>
 
 
 

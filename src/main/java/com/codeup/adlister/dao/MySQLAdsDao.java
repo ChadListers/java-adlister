@@ -52,7 +52,7 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-
+    @Override
     public List<Ad> allByAdId(long id) {
         String query = "SELECT * FROM chadlister_db.ads WHERE id =" + id;
         try {
@@ -64,6 +64,31 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    @Override
+    public List<Ad> allByAdPriceBelow(int price) {
+        String query = "SELECT * FROM chadlister_db.ads WHERE price <=" + price;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            ResultSet rs = preparedStatement.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving specific ad by price.", e);
+        }
+    }
+
+    @Override
+    public List<Ad> allByAdPriceAbove(int price) {
+        String query = "SELECT * FROM chadlister_db.ads WHERE price >=" + price;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            ResultSet rs = preparedStatement.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving specific ad by price.", e);
+        }
+    }
+
+    @Override
     public List<Ad> adsByCategoriesId(long id) {
         String query = "SELECT * FROM chadlister_db.ads WHERE category_id =" + id;
         try {

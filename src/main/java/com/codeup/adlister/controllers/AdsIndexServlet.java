@@ -34,6 +34,18 @@ public class AdsIndexServlet extends HttpServlet {
             request.setAttribute("ads", DaoFactory.getAdsDao().adsByCategoriesId(catId));
         }
 
+        if(request.getParameter("below") != null) {
+            int below = Integer.parseInt(request.getParameter("below"));
+            request.setAttribute("ads", DaoFactory.getAdsDao().allByAdPriceBelow(below));
+        }
+
+        if(request.getParameter("above") != null) {
+            int above = Integer.parseInt(request.getParameter("above"));
+            request.setAttribute("ads", DaoFactory.getAdsDao().allByAdPriceAbove(above));
+        }
+
+
+
 
         request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
     }

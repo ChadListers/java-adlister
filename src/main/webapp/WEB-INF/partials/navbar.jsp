@@ -24,7 +24,7 @@
     </c:if>
 
     <c:if test="${sessionScope.user == null}">
-        <a href="/">Home</a>
+<%--        <a href="/">Home</a>--%>
         <a href="/login">Login</a>
         <a href="/register">Register</a>
     </c:if>

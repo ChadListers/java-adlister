@@ -109,9 +109,12 @@ div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
     cursor: pointer;
 }
 
-h1 {
-    font-weight: lighter!important;
-}
+/*h1 {*/
+/*    font-weight: lighter!important;*/
+/*}*/
+/*h2 {*/
+/*    font-weight: lighter!important;*/
+/*}*/
 
 #form-bg {
     background: whitesmoke;

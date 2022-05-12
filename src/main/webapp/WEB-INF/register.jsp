@@ -39,7 +39,7 @@
             </c:if>
             <div class="d-flex justify-content-between">
                 <div class="pt-4 text-start">
-                    <a href="/profile">Return to Home</a>
+                    <a href="/">Return to Home</a>
                 </div>
                 <div class="pt-5 text-end">
                     <input type="submit" class="btn btn-block btn-primary">

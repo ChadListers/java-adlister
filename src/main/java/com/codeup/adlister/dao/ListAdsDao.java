@@ -61,6 +61,16 @@ public class ListAdsDao implements Ads {
     public Ad findAdById(long id) {
         return null;
     }
+
+    @Override
+    public List<Ad> allByAdPriceBelow(int price) {
+        return null;
+    }
+
+    @Override
+    public List<Ad> allByAdPriceAbove(int price) {
+        return null;
+    }
     /////////////////////////////////////
 
 
