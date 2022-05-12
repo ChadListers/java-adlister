@@ -19,4 +19,8 @@ public interface Ads {
     Ad findAdById(long id);
     public List<Ad> allByAdPriceBelow(int price);
     public List<Ad> allByAdPriceAbove(int price);
+    public List<Ad> sortPrice(String x);
+    public void views(int views, long id);
+
+
 }

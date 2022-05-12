@@ -87,6 +87,11 @@
                         <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?below=250">Under $250</a></h6>
                         <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?below=500">Under $500</a></h6>
                         <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?above=500"> $500 +</a></h6>
+                        <br>
+                        <br>
+                        <h2 style="font-weight: lighter">Sort By Price</h2>
+                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?sort=asc">Low - High</a></h6>
+                        <h6 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?sort=desc">High - Low</a></h6>
 
 
 
@@ -131,7 +136,7 @@
                         <a class="text-decoration-none" style="color: black" href="/ad?${ad.id}"><div class="d-flex flex-wrap">
                             <div class="card mb-3 mx-1" style="width: 300px">
                                 <img src="${ad.imageUrl}" class="card-img-top" alt="..." style="width: 298px; height: 200px">
-                                <div class="card-body">
+                                <div class="card-body pb-2">
                                         <%--line 21 is to grab the title of the ad below are more db grabbers--%>
                                     <h5 class="card-title">${ad.title}</h5>
                                         <c:forEach var="user" items="${users}">
@@ -145,8 +150,10 @@
                                         </c:if>
                                     </c:forEach>
                                     <p>${ad.description}</p>
-                                    <p style="color: green; font-weight: bold">$${ad.price}</p>
+                                    <p class="mb-0" style="color: green; font-weight: bold">$${ad.price}</p>
+                                            <p class="px-1 mb-0 text-end" ><small class="text-muted">Views: ${ad.views}</small></p>
                                 </div>
+
                             </div>
                         </div></a>
                         <%--AD CONTAINER ENDS HERE--%>

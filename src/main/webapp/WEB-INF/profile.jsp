@@ -124,8 +124,10 @@
                                             </c:if>
                                         </c:forEach>
                                             <p>${ad.description}</p>
+                                        <div class="m-auto d-flex justify-content-around">
                                             <p style="font-weight: bold; color: green">$${ad.price}</p>
-
+                                        <p class="px-3 mb-0 text-end" ><small class="text-muted">Views: ${ad.views}</small></p>
+                                        </div>
                                     <div class="mt-auto d-flex justify-content-between align-items-end">
                                         <form id="formDelete" class="mb-1" action="/ads/delete" method="post">
                                             <input type="hidden" name="delete" value="${ad.id}">

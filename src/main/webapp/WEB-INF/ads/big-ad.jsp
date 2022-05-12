@@ -29,8 +29,12 @@
 <c:forEach var="ad" items="${ads}">
     <div class="card">
         <div id="form-bg" class="card-body">
-            <h3 class="card-title px-3 py-1">${ad.title} - $${ad.price}</h3>
+            <div class="d-flex justify-content-between">
+            <h3 class=" w-75 card-title px-3 py-1">${ad.title} - $${ad.price}</h3>
+            <p class="w-25 px-1 mb-0 text-end text-muted" >Views: ${ad.views}</p>
+            </div>
             <p class="card-text px-3 py-1">${ad.description}</p>
+<%--            <p class="card-text px-3 py-1">views: ${ad.views}</p>--%>
             <p class="card-text px-3 py-1"><small class="text-muted">
                 <c:forEach var="cat" items="${categories}">
                 <c:if test="${ad.categoryId == cat.id}">

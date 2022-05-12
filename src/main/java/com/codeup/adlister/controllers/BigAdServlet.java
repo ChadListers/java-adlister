@@ -1,6 +1,7 @@
 package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
+import com.codeup.adlister.models.Ad;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,12 +12,19 @@ import java.io.IOException;
 
 @WebServlet("/ad")
 public class BigAdServlet extends HttpServlet {
-
+//    private int counter = 0;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        System.out.println(req.getQueryString());
+        Ad currentViews = DaoFactory.getAdsDao().findAdById(Long.parseLong(req.getQueryString()));
+
+        DaoFactory.getAdsDao().views(currentViews.getViews() + 1, Long.parseLong(req.getQueryString()));
+
+//        counter += 1;
+//        System.out.println(counter);
+
+//        System.out.println(req.getQueryString());
 
         req.setAttribute("ads", DaoFactory.getAdsDao().allByAdId(Long.parseLong(req.getQueryString())));
         req.setAttribute("categories", DaoFactory.getCategoriesDao().all());

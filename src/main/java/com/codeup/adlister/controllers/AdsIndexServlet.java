@@ -43,7 +43,10 @@ public class AdsIndexServlet extends HttpServlet {
             int above = Integer.parseInt(request.getParameter("above"));
             request.setAttribute("ads", DaoFactory.getAdsDao().allByAdPriceAbove(above));
         }
-
+        if(request.getParameter("sort") != null) {
+            String sortOrder = request.getParameter("sort");
+            request.setAttribute("ads", DaoFactory.getAdsDao().sortPrice(sortOrder));
+        }
 
 
 
