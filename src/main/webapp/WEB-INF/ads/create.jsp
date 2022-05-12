@@ -61,7 +61,7 @@
     $('#formId').submit(function (e) {
         if ($('#category').val() == '') {
             e.preventDefault();
-            alert("Please select an option");
+            alert("Please select a category");
             return false;
         } else {
             return true;

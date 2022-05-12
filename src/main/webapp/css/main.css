@@ -135,6 +135,14 @@ div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
 @media screen and (max-width: 768px) {
     #profile-info {
         width: 90% !important;
+
+    }
+    #navpic {
+        display: none;
+    }
+
+    .linkss {
+        width: 100% !important;
     }
 
 }
@@ -458,3 +466,10 @@ div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
     top: 0;
     /*border-radius: 10px;*/
 }
+
+
+/*NAV BAR LOGO*/
+
+
+
+
