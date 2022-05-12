@@ -19,8 +19,11 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
+<div class="container mt-5 mb-3 text-center">
+    <h6><a href="/ads" style="color: blue; text-decoration-line: underline;">Return to Ads</a></h6>
+</div>
+<div class=" mt-0 container d-flex flex-wrap justify-content-around px-0">
 
-<div class=" mt-5 container d-flex flex-wrap justify-content-around px-0">
 
 
 <c:forEach var="ad" items="${ads}">
@@ -31,14 +34,14 @@
             <p class="card-text px-3 py-1"><small class="text-muted">
                 <c:forEach var="cat" items="${categories}">
                 <c:if test="${ad.categoryId == cat.id}">
-                    <a class="text-decoration-none" style="font-size: 20px" href="/ads?${cat.id}">${cat.category}</a>
+                    <a class="text-decoration-none" style="font-size: 20px" href="/ads?catid=${cat.id}">${cat.category}</a>
                 </c:if>
                 </c:forEach></small>
             </p>
                 <c:forEach var="user" items="${users}">
                 <c:if test="${ad.userId == user.id}">
-                    <p><small class="text-muted px-3">Posted By: ${user.username}</small></p>
-                    <p><small class="text-muted px-3">Contact: ${user.email}</small></p>
+                    <p class="px-3 mb-0"><small class="text-muted">Posted By: ${user.username}</small></p>
+                    <p class="px-3 mt-0"><small class="text-muted ">Email: ${user.email}</small></p>
                 </c:if>
                 </c:forEach>
 

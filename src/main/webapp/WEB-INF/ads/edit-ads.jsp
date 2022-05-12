@@ -59,8 +59,13 @@
             <input id="image" name="image" class="form-control" type="url" value="${adToEdit.imageUrl}">
             <input id="id" name="adId" class="form-control" type="hidden" value="${adToEdit.id}">
         </div>
-        <div class="py-2 text-end">
-            <input type="submit" class="btn btn-block btn-primary">
+        <div class="d-flex justify-content-between">
+            <div class="pt-4 text-start">
+                <a href="/profile">Return to Profile</a>
+            </div>
+            <div class="pt-5 text-end">
+                <input type="submit" class="btn btn-block btn-primary">
+            </div>
         </div>
     </form>
 </div>

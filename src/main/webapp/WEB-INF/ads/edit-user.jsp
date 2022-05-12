@@ -20,6 +20,7 @@
 
 <div id="form-bg" class="container w-50 card px-3 py-5 mt-3">
     <h1 class="text-center">Edit Profile Information</h1>
+    <h6 class="text-center" style="font-weight: lighter; color: red">(Editing user information will require you to re-login.)</h6>
     <form action="/profile/edit" method="post">
         <div class="form-group py-1">
             <label for="username">Username</label>
@@ -44,8 +45,13 @@
         <div class="form-group py-1">
             <input name="id" class="form-control" type="hidden" value="${sessionScope.user.id}">
         </div>
-        <div class="py-2 text-end">
-            <input type="submit" class="btn btn-block btn-primary">
+        <div class="d-flex justify-content-between">
+            <div class="pt-4 text-start">
+                <a href="/profile">Return to Profile</a>
+            </div>
+            <div class="pt-5 text-end">
+                <input type="submit" class="btn btn-block btn-primary">
+            </div>
         </div>
     </form>
 </div>

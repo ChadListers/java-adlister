@@ -73,12 +73,24 @@
                     <div class="col-12 pt-5">
                         <%--                            <ul class="footer-links">--%>
                         <h1>Categories</h1>
+                        <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads">All</a></h5>
                         <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=1">Retro Gaming</a></h5>
                         <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=2">Collectibles</a></h5>
                         <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=3">Peripherals</a></h5>
                         <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=4">PC Gaming</a></h5>
                         <h5 class="cat-list my-5"><a class="text-decoration-underline text-blue" href="http://localhost:8080/ads?catid=5">Home Consoles</a></h5>
                         <%--                            </ul>--%>
+
+
+                            <!-- Homepage Leaderboard -->
+                            <ins class="adsbygoogle"
+                                 style="display:inline-block;width:300px;height:90px"
+                                 data-ad-client="ca-pub-1234567890123456"
+                                 data-ad-slot="1234567890"></ins>
+
+
+
+
                     </div>
 
 
@@ -104,7 +116,7 @@
 
                 <div class="d-flex justify-content-center pt-4 pb-4">
                         <form class="input-group w-75" method="get" action="/ads">
-                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" name="search" />
+                            <input type="search" class="form-control rounded" placeholder="Search ads" aria-label="Search" aria-describedby="search-addon" name="search" />
                             <button type="submit" class="btn btn-outline-dark">Search</button>
                         </form>
                 </div>
