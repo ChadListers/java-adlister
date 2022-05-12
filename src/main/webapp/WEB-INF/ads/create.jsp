@@ -45,8 +45,13 @@
                 <label for="image">Image Url</label>
                 <input id="image" name="image" class="form-control" type="url">
             </div>
-            <div class="py-2 text-end">
-            <input type="submit" class="btn btn-block btn-primary">
+            <div class="d-flex justify-content-between">
+                <div class="pt-4 text-start">
+                    <a href="/profile">Return to Profile</a>
+                </div>
+                <div class="pt-5 text-end">
+                    <input type="submit" class="btn btn-block btn-primary">
+                </div>
             </div>
         </form>
     </div>
@@ -56,6 +61,26 @@
         if ($('#category').val() == '') {
             e.preventDefault();
             alert("Please select an option");
+            return false;
+        } else {
+            return true;
+        }
+    });
+
+    $('#formId').submit(function (e) {
+        if ($('#title').val() == '') {
+            e.preventDefault();
+            alert("Please enter a title");
+            return false;
+        } else {
+            return true;
+        }
+    });
+
+    $('#formId').submit(function (e) {
+        if ($('#description').val() == '') {
+            e.preventDefault();
+            alert("Please enter a description");
             return false;
         } else {
             return true;

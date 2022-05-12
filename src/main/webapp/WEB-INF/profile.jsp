@@ -22,7 +22,7 @@
                 <div class="container">
                     <div class="row">
 
-                        <h2 class="pt-5">User Information</h2>
+                        <h2 class="pt-3">User Information</h2>
 
                         <div class="col-12 pt-3">
                             <div class="form-group">
@@ -100,7 +100,7 @@
         <div id="ads-info" class="w-75">
             <div class="container ps-5">
                 <div class="row">
-                    <h2 class="pt-5">Your Ads</h2>
+                    <h2 class="pt-3 pb-4">Your Ads</h2>
 
 
 
@@ -116,7 +116,8 @@
 <%--                                <div class="card mb-3 mt-1" style="width: 300px" onclick="document.getElementById('formEdit').submit();">--%>
                                     <img id="img" src="${ad.imageUrl}" class="card-img-top" alt="..." style="width: 298px; height: 200px">
                                     <div class=" d-flex flex-column card-body px-1 py-0">
-                                        <h5 class="card-title">${ad.title}</h5>
+                                        <a class="text-decoration-none" style="color: blue" href="/ad?${ad.id}">
+                                            <h5 class=" py-2 card-title">${ad.title}</h5></a>
                                         <c:forEach var="cat" items="${categories}">
                                             <c:if test="${ad.categoryId == cat.id}">
                                                 <p>${cat.category}</p>
