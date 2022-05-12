@@ -194,7 +194,7 @@
                     <li><a href="https://google.com/">PHP</a></li>
                     <li><a href="https://google.com/">Java</a></li>
                     <li><a href="https://google.com/">Android</a></li>
-                    <li><a href="https://google.com/">Templates</a></li>
+<%--                    <li><a href="https://google.com/">Templates</a></li>--%>
                 </ul>
             </div>
 
