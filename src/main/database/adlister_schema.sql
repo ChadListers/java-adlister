@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS ads (
     image_url VARCHAR(250),
     views INT UNSIGNED,
     PRIMARY KEY (id),
-    FOREIGN KEY (user_id) REFERENCES users (id),
+    FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
     FOREIGN KEY (category_id) REFERENCES category (id)
 );
 
